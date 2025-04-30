@@ -1,0 +1,491 @@
+:root {
+  --mainColor: #ffffff;
+  --secondaryColor: #333646;
+  --acsentColor: #f05000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background: linear-gradient(to right, #28a745, #dc3545);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-brand {
+  padding-left: 1rem 7%;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 1px;
+}
+
+.navbar .navbar-brand span {
+  font-size: 2.4rem;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  background-color: rgb(1, 53, 1);
+  color: yellow;
+  padding: 5px;
+  border-radius: 50px 100%;
+  transition: 0.3s;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  display: inline-block;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+.navbar .navbar-extra a:hover {
+  color: yellow;
+}
+
+.hero {
+  padding: 1rem 7%;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  padding-top: 20rem;
+  padding-bottom: 26rem;
+}
+
+/* Background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+/* Overlay gelap */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* super gelap */
+  z-index: -1;
+}
+
+.hero .container {
+  justify-content: end;
+  padding-top: 4rem;
+}
+
+.hero .container h1 {
+  font-size: 4rem;
+  color: #ff4343;
+}
+
+.hero .container h3 {
+  padding-top: 5px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  margin: 1px 10rem;
+}
+
+.hero button:hover {
+  color: #ffffff;
+  background-color: #b6a104;
+}
+
+/* About */
+.about {
+  padding-top: 3rem;
+  padding-bottom: 26rem;
+}
+
+.about .container {
+  margin: 1rem 7%;
+}
+.about .container h3 {
+  color: #333646;
+  font-size: 4rem;
+  justify-content: center;
+  display: flex;
+}
+
+.about .container p {
+  color: #333646;
+  padding-top: 4rem;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+.about .container p span {
+  font-weight: bold;
+}
+
+/* Kondisi */
+.kondisi {
+  padding-top: 5rem;
+  padding-bottom: 16rem;
+  background-color: #333;
+}
+
+.kondisi .container h3 {
+  color: #fff;
+  z-index: 1;
+}
+
+.kondisi .container {
+  box-sizing: border-box;
+  padding: 1rem 7%;
+  justify-content: center;
+}
+
+.kondisi .container h3 {
+  margin-bottom: 4rem;
+  color: #fff;
+  font-size: 4rem;
+  justify-content: center;
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Kartu individual */
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 50px;
+}
+
+.card-content h4 {
+  font-size: 2rem;
+  margin: 0 0 30px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 20px;
+  color: #666;
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.card-content a:hover {
+  background-color: #b71c1c;
+}
+
+/* Donasi */
+.donasi,
+.kontak {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 19rem;
+}
+
+.donasi h3 {
+  margin-bottom: 30px;
+  font-size: 4rem;
+  color: #333;
+  padding-top: 3rem;
+}
+
+.card-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card2 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+}
+
+.card2 img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.btn-donasi {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-donasi:hover {
+  background-color: #227ebc;
+}
+
+/* Kontak */
+.kontak {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.kontak .container-kontak {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  margin: auto;
+  padding: 0 3rem;
+  gap: 20rem;
+}
+
+.kontak .container h3 {
+  margin-bottom: 30px;
+  font-size: 4rem;
+  color: #fff;
+  padding-top: 2rem;
+}
+
+.contact-card {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 20px;
+  flex: 1 1 220px;
+  min-height: 10rem;
+  gap: 20rem;
+}
+
+.contact-card p {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.social-icons a {
+  color: #ddd;
+}
+
+.social-icons a i {
+  width: 30px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #227ebc;
+}
+
+.contact-card h4 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+.contact-card ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footers {
+  background-color: #28a745;
+  color: #fff;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.footers .footer-content p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-content p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-content p a:hover {
+  color: #fd0303;
+}
+
+/* Media Queries */
+@media (max-width: 1370px) {
+  html {
+    font-size: 100%;
+  }
+
+  .hero::before,
+  .hero::after {
+    height: 70%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 886px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .hero::before,
+  .hero::after {
+    height: 50%;
+  }
+
+  /* Kontak */
+  .contact-card {
+    text-align: center;
+    align-items: center;
+    font-size: medium;
+    line-height: 2rem;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #28a745;
+    font-size: 2rem;
+    display: block;
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    background-color: #fff;
+    color: #b71c1c;
+    line-height: 6rem;
+  }
+}
+
+@media (max-width: 456px) {
+  html {
+    font-size: 52%;
+  }
+}
